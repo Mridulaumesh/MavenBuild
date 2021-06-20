@@ -6,12 +6,10 @@ pipeline {
 	}
 	
 	stage ('Build'){
-	    steps{
-		//script{    
-		//sh "mvn clean install -Dmaven.test.skip=true"
+	       	//sh "mvn clean install -Dmaven.test.skip=true"
 		echo"hell"
-		//}
-	    }		    
+		
+	    	    
 	}
 
 	stage ('Test Cases Execution'){
@@ -37,6 +35,5 @@ pipeline {
 		      to: "anuj_sharma401@yahoo.com"
 		    )
 	}
-}
-
-    }	    
+  }
+}	    
