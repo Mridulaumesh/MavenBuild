@@ -1,14 +1,16 @@
-node('master') {
+pipeline {
+    agent any {
+    stages {	    
 	stage ('checkout code'){
 		checkout scm
 	}
 	
 	stage ('Build'){
 	    steps{
-		script{    
+		//script{    
 		//sh "mvn clean install -Dmaven.test.skip=true"
-		sh echo"hell"
-		}
+		echo"hell"
+		//}
 	    }		    
 	}
 
