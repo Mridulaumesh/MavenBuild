@@ -28,8 +28,8 @@ node('master') {
             }
         }
 	stage('step:5 docker image push'){
-                withCredentials([string(credentialsId: 'mridulaumesh03g', variable: 'DockerPassword')]) {
-                sh "docker login -u mridulaumesh03g -p ${DockerPassword}"
+                withCredentials([string(credentialsId: 'docker_cred', variable: 'DockerPassword')]) {
+                sh "docker login -u mridulaumesh03g -p esh03g0A@ecw6u"
                 sh "docker push mridulaumesh03g/java-maven:v1.0"
                 }
                
