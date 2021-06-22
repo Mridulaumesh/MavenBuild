@@ -30,4 +30,18 @@ node('master') {
 		      to: "anuj_sharma401@yahoo.com"
 		    )
 	}
+	stage('step :4 docker image build'){
+            steps{
+                sh "docker build -t mridulaumesh03g/java-maven:v1.0 ."
+            }
+        }
+	stage('step:5 docker image push'){
+            steps{
+                withCredentials([string(credentialsId: 'docker_cred', variable: 'DockerPassword')]) {
+                    sh "docker login -u mridulaumesh03g -p ${DockerPassword}"
+                    sh "docker push mridulaumesh03g/java-maven:v1.0"
+                }
+               
+            }
+        }
 }
