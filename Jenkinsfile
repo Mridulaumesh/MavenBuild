@@ -31,7 +31,7 @@ node('master') {
                 //withCredentials([string(credentialsId: 'mridulaumesh03g', variable: 'DockerPassword')]) {
                 sh "docker login -u mridulaumesh03g -p esh03g0A@ecw6u"
                 sh "docker push mridulaumesh03g/java-maven:v1.0"
-                }
+                
                
             
         }
