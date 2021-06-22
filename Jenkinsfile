@@ -12,7 +12,6 @@ node('master') {
 	}
         
 	stage('step:3 sonar scanner'){
-            
                 script{
                 def Sonar_path = tool name: 'sonar462', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
                 
