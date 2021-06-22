@@ -11,13 +11,13 @@ node('master') {
 		sh "mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install -Pcoverage-per-test"
 	}
         
-	 stage('step:3 sonar scanner'){
-            steps{
+	stage('step:3 sonar scanner'){
+            
                 script{
                 def Sonar_path = tool name: 'sonar462', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
                 
                 }
-            }
+            
         }
 	
 
