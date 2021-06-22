@@ -23,7 +23,7 @@ node('master') {
 	
 	
 	stage('step :4 docker image build'){
-            steps{
+                script{
                 sh "docker build -t mridulaumesh03g/java-maven:v1.0 ."
             }
         }
