@@ -11,14 +11,7 @@ node('master') {
 		sh "mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install -Pcoverage-per-test"
 	}
 
-	stage('step:3 sonar scanner'){
-            steps{
-                script{
-                def Sonar_path = tool name: 'sonar462', type: 'SonarQube Scanner'
-                
-                }
-            }
-        }
+	
 
 	
 	
